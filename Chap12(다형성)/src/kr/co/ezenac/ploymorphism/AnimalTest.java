@@ -60,6 +60,34 @@ public class AnimalTest
 	{
 		animal.move();		
 	}
+	
+	public void checkDownCast(ArrayList<Animal> list)
+	{
+		for(int i=0; i<list.size(); i++)
+		{
+			Animal animal = list.get(i);
+			
+			if(animal instanceof Dog)
+			{
+				Dog danimal = (Dog)animal;	//다운 캐스팅
+				danimal.playBall();
+			}
+			else if(animal instanceof Tiger)
+			{
+				Tiger tanimal = (Tiger)animal;
+				tanimal.hunt();
+			}
+			else if(animal instanceof Eagle)
+			{
+				Eagle eanimal = (Eagle)animal;
+				eanimal.pickup();
+			}
+			else
+			{
+				animal.eat();
+			}
+		}
+	}
 	public static void main(String[] args)
 	{
 		Dog danimal = new Dog();
@@ -82,6 +110,10 @@ public class AnimalTest
 		{
 			animal.move();
 		}
+		
+		System.out.println();
+		
+		test.checkDownCast(animalList);
 	}
 
 }
