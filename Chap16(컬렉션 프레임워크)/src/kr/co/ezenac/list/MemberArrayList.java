@@ -1,6 +1,7 @@
 package kr.co.ezenac.list;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class MemberArrayList
 {
@@ -15,6 +16,8 @@ public class MemberArrayList
 	{
 		arrayList.add(member);
 	}
+	
+	//Iterator<E>
 	
 	public boolean removeMember(int memberId)
 	{
