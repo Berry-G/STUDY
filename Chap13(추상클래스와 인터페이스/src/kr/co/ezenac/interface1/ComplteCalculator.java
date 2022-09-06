@@ -18,9 +18,9 @@ public class ComplteCalculator extends Calculator
 	}
 	
 	
-	public void result()
+	public void showInfo()
 	{
-		
+		System.out.println("모두 구현한 상태입니다.");
 	}
 
 }
