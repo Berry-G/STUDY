@@ -1,4 +1,4 @@
-package kr.co.Ezenac.anotherconstructor;
+package kr.co.ezenac.anotherconstructor;
 
 public class Person
 {

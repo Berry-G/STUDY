@@ -1,4 +1,4 @@
-package kr.co.Ezenac.incapsulation;
+package kr.co.ezenac.incapsulation;
 
 public class DisplayAddress
 {

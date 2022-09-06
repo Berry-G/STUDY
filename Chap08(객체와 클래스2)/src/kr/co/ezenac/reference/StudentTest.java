@@ -1,4 +1,4 @@
-package kr.co.Ezenac.reference;
+package kr.co.ezenac.reference;
 
 public class StudentTest
 {

@@ -1,4 +1,4 @@
-package kr.co.Ezenac.goingschool;
+package kr.co.ezenac.goingschool;
 
 public class GoingToSchool
 {

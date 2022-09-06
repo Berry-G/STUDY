@@ -1,6 +1,7 @@
-package kr.co.Ezenac.reference;
+package kr.co.ezenac.reference;
 
 import javax.security.auth.Subject;
+
 import javax.swing.event.ListDataEvent;
 
 public class Student
