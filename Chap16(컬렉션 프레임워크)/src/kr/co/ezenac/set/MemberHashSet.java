@@ -1,9 +1,11 @@
 package kr.co.ezenac.set;
 
-import java.lang.reflect.Member;
+//import java.lang.reflect.Member;
 import java.util.HashSet;
+import java.util.Iterator;
 
-import javax.swing.text.html.HTMLDocument.Iterator;
+import kr.co.ezenac.list.Member;
+
 
 public class MemberHashSet
 {
@@ -35,5 +37,12 @@ public class MemberHashSet
 		System.out.println(memberId + "가 존재하지 않습니다.");
 		return false;
 	}
+	
+//	public void showAllMembers()
+//	{
+//		for(Member member : hashSet)
+//			System.out.println(member);
+//		System.out.println();
+//	}
 
 }
