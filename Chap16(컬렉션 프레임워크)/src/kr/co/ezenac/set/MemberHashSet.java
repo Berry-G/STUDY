@@ -1,10 +1,8 @@
 package kr.co.ezenac.set;
 
-//import java.lang.reflect.Member;
 import java.util.HashSet;
 import java.util.Iterator;
 
-import kr.co.ezenac.list.Member;
 
 
 public class MemberHashSet
@@ -38,11 +36,11 @@ public class MemberHashSet
 		return false;
 	}
 	
-//	public void showAllMembers()
-//	{
-//		for(Member member : hashSet)
-//			System.out.println(member);
-//		System.out.println();
-//	}
+	public void showAllMembers()
+	{
+		for(Member member : hashSet)
+			System.out.println(member);
+		System.out.println();
+	}
 
 }

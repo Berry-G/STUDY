@@ -15,7 +15,7 @@ public class MemberHashSetTest
 		memberHashSet.addMember(memberW);
 		memberHashSet.addMember(memberN);
 		memberHashSet.addMember(memberK);
-//		memberHashSet.showAllmember();
+		memberHashSet.showAllMembers();
 	}
 
 }

@@ -1,7 +1,5 @@
 package kr.co.ezenac.set;
 
-import kr.co.ezenac.list.Member;
-
 public class Member
 {
 	private int memberId;		//회원 아이디
