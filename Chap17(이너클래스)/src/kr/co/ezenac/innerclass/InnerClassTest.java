@@ -1,5 +1,7 @@
 package kr.co.ezenac.innerclass;
 
+import kr.co.ezenac.innerclass.OutClass.InClass;
+
 class OutClass
 {
 	private int num = 10;
@@ -18,7 +20,7 @@ class OutClass
 			System.out.println("InClass inNum = " + inNum + "(내부 클래스의 인스턴스 변수)");
 		}
 
-		public void usingInClass()
+		void usingInClass()
 		{
 			inClass.inTest();
 		}
@@ -44,14 +46,15 @@ public class InnerClassTest
 {
 	public static void main(String[] args)
 	{
-		OutClass outCalss = new OutClass();
+		OutClass outClass = new OutClass();
 		//외부 클래스를 이용하여 내부 클래스 메서드 호출
-		OutClass.usingInClass();
+		//outClass.usingInClass;
 		System.out.println();
 		
 		//외부 클래스를 이용하여
-		OutClass.InClass inClass = outCalss.new InClass();
+		OutClass.InClass inClass = outClass.new InClass();
 		inClass.inTest();
+		inClass.usingInClass();
 		System.out.println();
 		
 		
