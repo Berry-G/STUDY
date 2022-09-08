@@ -3,8 +3,6 @@ package kr.co.ezenac.map;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import kr.co.ezenac.list.Member;
-
 public class MemberHashMap
 {
 	private HashMap<Integer, Member> hashMap;
