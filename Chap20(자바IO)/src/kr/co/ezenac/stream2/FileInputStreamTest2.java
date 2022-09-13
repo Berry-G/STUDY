@@ -1,18 +1,15 @@
-package kr.co.ezenac.stream;
+package kr.co.ezenac.stream2;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class FileInputStreamTest
+public class FileInputStreamTest2
 {
 	public static void main(String[] args)
 	{
-		FileInputStream fis = null;
-		try
+		try(FileInputStream fis = new FileInputStream("input.txt"))
 		{
-			fis = new FileInputStream("input.txt");
 			int i;
 			while ((i = fis.read()) != -1)
 			{
@@ -27,21 +24,7 @@ public class FileInputStreamTest
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally
-		{
-			if (fis != null)
-			{
-				try
-				{
-					fis.close();
-				} catch (IOException e)
-				{
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
 		}
-
 		System.out.println("end");
 	}
 
