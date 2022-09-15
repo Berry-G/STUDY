@@ -1,5 +1,11 @@
 package kr.co.ezenac.project.ui;
 
+import kr.co.ezenac.project.school.School;
+import kr.co.ezenac.project.school.Score;
+import kr.co.ezenac.project.school.Student;
+import kr.co.ezenac.project.school.Subject;
+import kr.co.ezenac.project.school.view.GenerateGradeDisplay;
+
 /**
  * 
  * 1. 문제정의
@@ -66,5 +72,81 @@ package kr.co.ezenac.project.ui;
 
 public class UiMain
 {
+	School ezenSchool = School.getInstance();
+	Subject korean;
+	Subject math;
+	
+	GenerateGradeDisplay gradeDisplay = new GenerateGradeDisplay();
+	
+	
+	public static void main(String[] args)
+	{
+		UiMain uiMain = new UiMain();
+		uiMain.createSubject();		//시험과목 생성
+		uiMain.createStudent();		//학생 생성
+
+		String displayResult = uiMain.gradeDisplay.getDisplay();
+		System.out.println(displayResult);
+	}
+
+
+	private void createStudent()
+	{
+		Student student1 = new Student("스티브잡스", 20220915, korean);
+		Student student2 = new Student("이순신", 20220916, math);
+		Student student3 = new Student("리누스토발츠", 20220917, korean);
+		Student student4 = new Student("제임스고슬링", 20220918, korean);
+		Student student5 = new Student("이도", 20220919, math);
+
+		ezenSchool.addStudent(student1);
+		ezenSchool.addStudent(student2);
+		ezenSchool.addStudent(student3);
+		ezenSchool.addStudent(student4);
+		ezenSchool.addStudent(student5);
+		
+		korean.register(student1);
+		korean.register(student2);
+		korean.register(student3);
+		korean.register(student4);
+		korean.register(student5);
+
+		math.register(student1);
+		math.register(student2);
+		math.register(student3);
+		math.register(student4);
+		math.register(student5);
+
+		addScoreForStudent(student1, korean, 95);
+		addScoreForStudent(student1, math, 56);
+		addScoreForStudent(student2, korean, 95);
+		addScoreForStudent(student2, math, 98);
+		addScoreForStudent(student3, korean, 100);
+		addScoreForStudent(student3, math, 88);
+		addScoreForStudent(student4, korean, 89);
+		addScoreForStudent(student4, math, 95);
+		addScoreForStudent(student5, korean, 83);
+		addScoreForStudent(student5, math, 56);
+		
+	}
+
+
+	private void addScoreForStudent(Student student, Subject subject, int score)
+	{
+		Score score1 = new Score(student.getStudentId(), subject, score);
+		student.addSubjectScore(score1);
+
+		
+	}
+
+
+	public void createSubject()
+	{
+
+		korean = new Subject(Constant.KOREAN, "국어");
+		math = new Subject(Constant.MATH, "수학");
+		
+		ezenSchool.addSubject(korean);
+		ezenSchool.addSubject(math);
+	}
 
 }
