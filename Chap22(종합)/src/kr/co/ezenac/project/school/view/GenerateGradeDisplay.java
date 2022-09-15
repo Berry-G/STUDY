@@ -3,6 +3,7 @@ package kr.co.ezenac.project.school.view;
 import java.util.ArrayList;
 
 import kr.co.ezenac.project.grade.BasicEvaluation;
+import kr.co.ezenac.project.grade.GolfEvaluation;
 import kr.co.ezenac.project.grade.GradeEvaluation;
 import kr.co.ezenac.project.grade.MajorEvaluation;
 import kr.co.ezenac.project.school.School;
@@ -69,7 +70,7 @@ public class GenerateGradeDisplay
 		int majorId = student.getMajorSubject().getSubjectId();
 		
 		//학점 평가 클래스
-		GradeEvaluation[] gradeEvaluations = {new BasicEvaluation(), new MajorEvaluation()};
+		GradeEvaluation[] gradeEvaluations = {new BasicEvaluation(), new MajorEvaluation(), new GolfEvaluation()};
 		for(int i=0; i<scoreList.size(); i++)
 		{
 			//학생이 가진 점수들
@@ -80,6 +81,10 @@ public class GenerateGradeDisplay
 				if(score.getSubject().getSubjectId() == majorId)
 				{
 					grade = gradeEvaluations[Constant.SAB_TYPE].getGrade(score.getScore());
+				}
+				else if(score.getSubject().getSubjectId() == Constant.GOLF)
+				{
+					grade = gradeEvaluations[Constant.PF_TYPE].getGrade(score.getScore());
 				}
 				else
 				{

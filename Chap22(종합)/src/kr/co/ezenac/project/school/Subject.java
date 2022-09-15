@@ -9,11 +9,11 @@ public class Subject
 	private String gradeType;	//학점 부여 방식 (기본은 A~F 부여)
 	private ArrayList<Student> students = new ArrayList<>();
 	
-	public Subject(int subjectId, String gradeType)
+	public Subject(int subjectId, String subjectname)
 	{
 		//super();
 		this.subjectId = subjectId;
-		this.gradeType = gradeType;
+		this.subjectName = subjectname;
 	}
 	public int getSubjectId()
 	{

@@ -75,6 +75,7 @@ public class UiMain
 	School ezenSchool = School.getInstance();
 	Subject korean;
 	Subject math;
+	Subject golf;
 	
 	GenerateGradeDisplay gradeDisplay = new GenerateGradeDisplay();
 	
@@ -115,15 +116,26 @@ public class UiMain
 		math.register(student3);
 		math.register(student4);
 		math.register(student5);
+		
+		golf.register(student1);
+		golf.register(student2);
+		golf.register(student3);
 
 		addScoreForStudent(student1, korean, 95);
 		addScoreForStudent(student1, math, 56);
+		addScoreForStudent(student1, golf, 95);
+		
 		addScoreForStudent(student2, korean, 95);
 		addScoreForStudent(student2, math, 98);
+		addScoreForStudent(student2, golf, 85);
+		
 		addScoreForStudent(student3, korean, 100);
 		addScoreForStudent(student3, math, 88);
+		addScoreForStudent(student3, golf, 55);
+		
 		addScoreForStudent(student4, korean, 89);
 		addScoreForStudent(student4, math, 95);
+		
 		addScoreForStudent(student5, korean, 83);
 		addScoreForStudent(student5, math, 56);
 		
@@ -144,9 +156,11 @@ public class UiMain
 
 		korean = new Subject(Constant.KOREAN, "국어");
 		math = new Subject(Constant.MATH, "수학");
+		golf = new Subject(Constant.GOLF, "골프");
 		
 		ezenSchool.addSubject(korean);
 		ezenSchool.addSubject(math);
+		ezenSchool.addSubject(golf);
 	}
 
 }
