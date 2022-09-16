@@ -56,7 +56,7 @@ public class GenerateGradeDisplay
 				buffer.append("\t\t");
 			buffer.append(student.getStudentId());
 			buffer.append("\t" + student.getMajorSubject().getSubjectName());
-			GetScoreGrade(student, subject.getSubjectId());	//학생 별 해당과목 학점 계산
+			GetScoreGrade(student, subject);	//학생 별 해당과목 학점 계산
 			
 			buffer.append("\n");
 			
@@ -64,7 +64,7 @@ public class GenerateGradeDisplay
 		buffer.append(GenerateGradeDisplay.LINE2);
 	}
 
-	public void GetScoreGrade(Student student, int subjectId)
+	public void GetScoreGrade(Student student, Subject subject)
 	{
 		ArrayList<Score> scoreList = student.getScores();
 		int majorId = student.getMajorSubject().getSubjectId();
@@ -75,14 +75,14 @@ public class GenerateGradeDisplay
 		{
 			//학생이 가진 점수들
 			Score score = scoreList.get(i);
-			if(score.getSubject().getSubjectId() == subjectId)
+			if(score.getSubject().getSubjectId() == subject.getSubjectId())
 			{
 				String grade;
 				if(score.getSubject().getSubjectId() == majorId)
 				{
 					grade = gradeEvaluations[Constant.SAB_TYPE].getGrade(score.getScore());
 				}
-				else if(score.getSubject().getSubjectId() == Constant.GOLF)
+				else if(score.getSubject().getGradeType() == "PF_TYPE")
 				{
 					grade = gradeEvaluations[Constant.PF_TYPE].getGrade(score.getScore());
 				}

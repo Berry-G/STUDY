@@ -2,6 +2,8 @@ package kr.co.ezenac.project.school;
 
 import java.util.ArrayList;
 
+import kr.co.ezenac.project.ui.Constant;
+
 public class Subject
 {
 	private int subjectId;		//과목 고유번호
@@ -33,6 +35,8 @@ public class Subject
 	}
 	public String getGradeType()
 	{
+		if(this.getSubjectId() == Constant.GOLF)
+			this.gradeType="PF_TYPE";
 		return gradeType;
 	}
 	public void setGradeType(String gradeType)
