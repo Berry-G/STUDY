@@ -1,6 +1,6 @@
 package kr.co.ezenac.decorator;
 
-public abstract class Decorator
+public abstract class Decorator extends Coffee
 {
 	Coffee coffee;
 	public Decorator(Coffee coffee)
@@ -10,7 +10,7 @@ public abstract class Decorator
 	
 	public void brewing()
 	{
-//		Coffee.brewing();
+		coffee.brewing();
 	}
 
 }

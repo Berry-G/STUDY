@@ -14,6 +14,7 @@ public class CoffeeTest
 		
 		Mocha kenyaMocha = new Mocha(new Latte(kenyaAmericano));
 		kenyaMocha.brewing();
+		System.out.println();
 		
 		WhippedCream etiopiaWhippedMocha =
 				new WhippedCream(new Mocha(new Latte(new EtiopiaAmericano())));
