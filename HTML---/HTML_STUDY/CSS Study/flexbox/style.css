@@ -1,0 +1,16 @@
+html
+{
+  background-color: #999999;
+}
+
+div
+{
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+}
+
+#second
+{
+  background-color: seagreen;
+}
