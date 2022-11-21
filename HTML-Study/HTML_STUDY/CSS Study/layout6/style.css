@@ -1,0 +1,43 @@
+body
+{
+  height: 1000vh;
+  background-color: antiquewhite;
+}
+
+div
+{
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+  position: static;
+}
+
+#second
+{
+  background-color: green;
+  position: fixed;
+}
+.grandparent
+{
+  background-color: seagreen;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+.parent
+{
+  background-color: lightblue;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 100px;
+}
+
+.child
+{
+  background-color: crimson;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+}
