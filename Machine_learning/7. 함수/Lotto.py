@@ -10,12 +10,14 @@
 """
 import random
 
+
 def get_random_number():
-    number = random.randint(1,45)
+    number = random.randint(1, 45)
     return number
 
+
 lotto = []
-while len(lotto)<6:
+while len(lotto) < 6:
     x = get_random_number()
     # 중복 체크
     if x not in lotto:
@@ -25,4 +27,4 @@ lotto.sort()
 # print(lotto)
 
 for num in lotto:
-    print(num,end=" ")
+    print(num, end=" ")
