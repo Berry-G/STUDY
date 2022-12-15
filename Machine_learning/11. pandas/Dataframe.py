@@ -75,3 +75,105 @@ print(soccer_team)
 
 soccer_team2 = [name for name, height in candidates.items() if height >= 175]
 print(soccer_team2)
+
+
+print()
+# 구구단 출력 (for 문)
+for num2 in range(1, 10):
+    for num1 in range(2, 10):
+        print("{} x {} = {}".format(num1, num2, num1*num2),end= "\t")
+    print()
+
+print()
+# 구구단 가로 출력 (while 문)
+n = 2
+while n < 10:
+    m = 1
+    while m < 10:
+        print("{} x {} = {}".format(n, m, n*m),end= "\t")
+        m += 1
+    print()
+    n += 1
+
+print()
+'''
+    얼마나 시간이 걸리고 개수가 몇개인지 확인하시오.
+    - for 문을 이용하여 1부터 1000000까지의 숫자중에서 3의 배수인 숫자들을 찾고,
+    몇개가 있는지 알아보자.
+    - 이 코드를 수행하는데 걸린 시간을 확인해보자.
+'''
+import time
+start = time.time()
+
+ls = []
+for a in range(1, 1000001):
+    if a % 3 == 0:
+        ls.append(a)
+
+end = time.time()
+print(f"소요시간 : {end - start}")
+print(f"개수 : {len(ls)}개")
+
+print()
+# 앞서 구구단은 얼마나 시간이 걸릴까요?
+start = time.time()
+# 구구단 출력 (for 문)
+for num2 in range(1, 10):
+    for num1 in range(2, 10):
+        print("{} x {} = {}".format(num1, num2, num1*num2),end= "\t")
+    print()
+end = time.time()
+print(f"소요시간 : {end - start}")
+
+print()
+'''
+    도준이가 5000원 이상 소지하고 있을 경우 택시를 타고 집에 귀가할수 있지만,
+    걸어서 귀가할 수도 있습니다.
+    택시를 탈 경우, 3000원이 소비됩니다. 잔액을 표시하시오.
+
+    2000원 이상 있을 경우 버스를 타고 귀가할수 있습니다.
+    버스를 탈 경우, 1000원이 소비됩니다. 잔액을 표시하시오.
+
+    2000원 미만일 경우 걸어서 귀가할수 있습니다.
+    위 조건을 반영하는 코드를 작성하시오.
+'''
+money = 10000
+taxi  = True
+
+if money >= 5000:
+    if taxi:
+        money -= 3000
+        print(f"택시를 탑니다, 잔액은 : {money}원")
+    else:
+        print(f"걸어서 귀가, 잔액은 : {money}원")
+elif money >= 2000:
+    money -= 1000
+    print(f"버스를 탑니다, 잔액은 : {money}원")
+else:
+    print("걸어서 귀가")
+
+print()
+'''
+    도진이가 택시에 내려서 걸어서 귀가하던 중
+    집 근처 오락실에서 '철권'게임을 하고 싶어졌습니다.
+    회당 500원인 이 게임을 몇번이나 할수 있을까요?
+    매번 게임을 진행한 뒤 도준이가 가지고 있는 잔액과 몇 번 게임을 했는지 횟수를 출력하는 코드를 작성하시오.
+
+    현재까지의 게임한 횟수는 :
+    현재 잔액 :
+
+    최종 게임 횟수 :
+    최종 잔액 :
+'''
+# money = 7000
+counts = 0
+while money >= 500:
+    counts += 1
+    money -= 500
+    print(f"현재까지의 게임한 횟수는 : {counts}회")
+    print(f"현재 잔액 : {money}원")
+
+print(f"최종 게임 횟수 : {counts}회")
+print(f"최종 잔액 : {money}원")
+
+
