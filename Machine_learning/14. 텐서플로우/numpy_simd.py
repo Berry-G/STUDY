@@ -31,3 +31,12 @@
         3) 리스트와 넘파이의 가장 큰 차이는 계산 성능임
             - 넘파이는 대용랑의 배열, 행렬 연산 함수를 포함, 성능 우수
 """
+
+import numpy as np
+
+arr1 = np.array([[1,2,3], [4,5,6], [7,8,9]])
+arr2 = np.array([[2,3], [2,2], [1,3]])
+print()
+# result = arr @ arr2
+result = arr1.dot(arr1, arr2)
+print(result)
