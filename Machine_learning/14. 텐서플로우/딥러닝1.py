@@ -10,7 +10,10 @@
             - Deep Learning : Deep Neural Networks
                 - 인공지능이라는 거대한 학문의 일부
                 - ML의 여러 기법 중 하나
-
+                - Machine Learning + Deep Neural Network
+                    - 뉴런 (Neuron)
+                        - 이전 뉴런과 연결
+                        - 다음 뉴런으로 전달
 
 """
 
