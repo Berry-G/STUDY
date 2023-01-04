@@ -51,3 +51,19 @@ X =
 from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test, = train_test_split(X, y, test_size=0.20, random_state=42)
+
+# 케라스 사용해서 모델 정의
+from tensorflow.keras.layer
+
+model = Model(inputs=input_layer, outputs = output)
+
+# 모델 완전연결층은 총 3개로 구성되어 있음.
+model.summary()
+
+# 모델 훈련
+history = model.fit(X_train, y_train, batch_size = 8, epochs = 50, verbose = 1, validation_split = 0.2)
+
+# 모델 평가
+score = model.evalute(X_test, y_test, verbose = 1)
+print("Test score : ", score[0])
+print("Test Accuracy : ", score[1])

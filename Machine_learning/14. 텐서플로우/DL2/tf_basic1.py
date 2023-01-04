@@ -26,3 +26,5 @@ import numpy as np
 import tensorflow as tf
 
 # 로그레벨이 3이면 warining이 뜨지 않음
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
