@@ -4,11 +4,14 @@ import tensorflow as tf
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-"""
-    5) 텐서의 모양
-        -reshape() : 텐서의 모양을 변경
-            - 이때 텐서의 순서는 변경되지 않음
-"""
+'''
+        5) 텐서의 모양 변경
+            - reshape() : 텐서의 모양을 변경할 때 사용
+                - 이때 텐서(tensor)의 순서는 변경되지 않음
+
+        6) 텐서의 차원 교환
+            - 하나의 텐서에서 특정한 차원끼리 순서를 교체할수 있음
+'''
 
 a = tf.Variable([1, 2, 3, 4, 5, 6, 7, 8])
 print(a)
