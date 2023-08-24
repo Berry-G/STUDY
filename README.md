@@ -59,6 +59,7 @@
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
 ![Apache Tomcat](https://img.shields.io/badge/apache%20tomcat-%23F8DC75.svg?style=for-the-badge&logo=apache-tomcat&logoColor=black)
+[![DBeaver Community](https://img.shields.io/badge/DBeaver-00A1E9?style=for-the-badge&logoColor=white)](https://dbeaver.io/)
 ## Security
 ![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Spring-Security&logoColor=white)
 ## Browsers
@@ -72,6 +73,7 @@
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ## Tools
 ![DataGrip](https://img.shields.io/badge/DataGrip-000000.svg?style=for-the-badge&logo=DataGrip&logoColor=white)
+[![DBeaver Community](https://img.shields.io/badge/DBeaver-00A1E9?style=for-the-badge&logoColor=white)](https://dbeaver.io/)
 </details>
 
 
